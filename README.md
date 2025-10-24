@@ -10,15 +10,15 @@ Contents of the Repository
 
 This repository is structured following the TIER Protocol 4.0 to ensure transparency and reproducibility. It includes all code, data, documentation, and outputs used to complete this project. The major folders are:
 
-SCRIPTS/ – Contains all source code and scripts used for data processing, analysis, and visualization.
+SCRIPTS/ – Contains all source code and scripts used for data processing, analysis, and visualization
 
-DATA/ – Contains initial, cleaned, and processed datasets, along with metadata and data dictionaries.
+DATA/ – Contains initial, cleaned, and processed datasets, along with metadata and data dictionaries
 
-OUTPUT/ – Contains all generated figures, tables, and results from the analysis.
+OUTPUT/ – Contains all generated figures, tables, and results from the analysis
 
-LICENSE.md – Specifies the terms of use (MIT License by default).
+LICENSE.md – Specifies the terms of use (MIT License by default)
 
-README.md – Orientation and documentation for this repository.
+README.md – Orientation and documentation for this repository
 
 Section 1: Software and Platform
 
@@ -56,37 +56,46 @@ project-repository/
 ├── LICENSE.md
 │
 ├── SCRIPTS/
-│ ├── 01_data_cleaning.py
-│ ├── 02_feature_engineering.py
-│ ├── 03_model_training.py
-│ ├── 04_visualization.ipynb
+│   ├── 01_data_cleaning.py
+│   ├── 02_feature_engineering.py
+│   ├── 03_model_training.py
+│   ├── 04_visualization.ipynb
 │
 ├── DATA/
-│ ├── raw_data.csv
-│ ├── cleaned_data.csv
-│ ├── metadata_README.md
+│   ├── raw_data.csv
+│   ├── cleaned_data.csv
+│   ├── metadata_README.md
 │
 ├── OUTPUT/
-│ ├── model_summary.txt
-│ ├── results_table.csv
-│ ├── figure_1_accuracy_plot.png
-│ ├── figure_2_feature_importance.png
+│   ├── model_summary.txt
+│   ├── results_table.csv
+│   ├── figure_1_accuracy_plot.png
+│   ├── figure_2_feature_importance.png
 │
 └── docs/
-├── project_proposal.pdf
-├── final_report.pdf
+    ├── project_proposal.pdf
+    ├── final_report.pdf
+
 
 Each folder contains a local README.md where relevant, explaining the files and their purposes.
 
 Section 3: Instructions for Reproducing Results
 
-Follow the steps below to reproduce the results from this project.
-
 Step 1: Clone the Repository
-Clone the repository and navigate to the project directory.
+Clone the repository and navigate to the project directory:
+
+git clone [repository-link]
+cd your-repo-name
+
 
 Step 2: Set Up the Environment
 It is recommended to use a virtual environment. Install dependencies listed in requirements.txt.
+
+python -m venv env
+source env/bin/activate      # On macOS/Linux
+env\Scripts\activate         # On Windows
+pip install -r requirements.txt
+
 
 Step 3: Access the Data
 Ensure the DATA/ folder contains the raw_data.csv file. If the dataset is too large for GitHub, refer to DATA/metadata_README.md for a download link.
@@ -107,7 +116,7 @@ Step 7: Review the Outputs
 All generated tables and figures will appear in the OUTPUT/ folder.
 
 Step 8: Verify Results
-The outputs should reproduce the same results as shown in the presentation and final report. If differences occur, ensure all dependencies and package versions match those listed.
+The outputs should reproduce the same results as shown in the presentation and final report. Ensure all dependencies and package versions match those listed.
 
 References
 
