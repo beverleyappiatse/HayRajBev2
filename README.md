@@ -1,12 +1,12 @@
-HayRajBev2
-Electric Vehicle Charging Demand
+# HayRajBev2
+# Electric Vehicle Charging Demand
 
-Course: DS 4002 Section 001
-Date: 10/20/2025
-Team Members: Hayden Cook (leader), Beverley Appiatse, Raj Bhowmic
-Instructor: Professor Alonzi
+## Course: DS 4002 Section 001
+## Date: 10/20/2025
+## Team Members: Hayden Cook (leader), Beverley Appiatse, Raj Bhowmic
+## Instructor: Professor Alonzi
 
-Contents of the Repository
+### Contents of the Repository
 
 This repository is structured following the TIER Protocol 4.0 to ensure transparency and reproducibility. It includes all code, data, documentation, and outputs used to complete this project. The major folders are:
 
@@ -20,7 +20,7 @@ LICENSE.md – Specifies the terms of use (MIT License by default)
 
 README.md – Orientation and documentation for this repository
 
-Section 1: Software and Platform
+#### Section 1: Software and Platform
 
 Software Used:
 
@@ -46,7 +46,7 @@ Developed and tested on macOS Monterey (version 12.6)
 
 Fully compatible with Windows 10/11 and Linux systems
 
-Section 2: Map of Documentation
+#### Section 2: Map of Documentation
 
 Repository Structure:
 
@@ -78,7 +78,7 @@ project-repository/
 
 Each folder contains a local README.md where relevant, explaining the files and their purposes.
 
-Section 3: Instructions for Reproducing Results
+#### Section 3: Instructions for Reproducing Results
 
 Step 1: Clone the Repository
 Download a local copy by running:
@@ -113,7 +113,7 @@ All generated tables and figures will appear in the OUTPUT/ folder.
 Step 8: Verify Results
 The outputs should reproduce the same results as shown in the presentation and final report. Ensure all dependencies and package versions match those listed.
 
-References
+### References
 
 Guo, X., Zhang, Y., & Li, T. (2025). CHARGED: A Harmonized Global Dataset for Electric Vehicle Charging Demand Forecasting. Harvard Dataverse. https://doi.org/10.7910/DVN/CHARGED
 
