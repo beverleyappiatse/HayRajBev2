@@ -56,49 +56,44 @@ project-repository/
 ├── LICENSE.md
 │
 ├── SCRIPTS/
-│   ├── 01_data_cleaning.py
-│   ├── 02_feature_engineering.py
-│   ├── 03_model_training.py
-│   ├── 04_visualization.ipynb
+│ ├── 01_data_cleaning.py
+│ ├── 02_feature_engineering.py
+│ ├── 03_model_training.py
+│ ├── 04_visualization.ipynb
 │
 ├── DATA/
-│   ├── raw_data.csv
-│   ├── cleaned_data.csv
-│   ├── metadata_README.md
+│ ├── raw_data.csv
+│ ├── cleaned_data.csv
+│ ├── metadata_README.md
 │
 ├── OUTPUT/
-│   ├── model_summary.txt
-│   ├── results_table.csv
-│   ├── figure_1_accuracy_plot.png
-│   ├── figure_2_feature_importance.png
+│ ├── model_summary.txt
+│ ├── results_table.csv
+│ ├── figure_1_accuracy_plot.png
+│ ├── figure_2_feature_importance.png
 │
 └── docs/
-    ├── project_proposal.pdf
-    ├── final_report.pdf
-
+├── project_proposal.pdf
+├── final_report.pdf
 
 Each folder contains a local README.md where relevant, explaining the files and their purposes.
 
 Section 3: Instructions for Reproducing Results
 
 Step 1: Clone the Repository
-Clone the repository and navigate to the project directory:
-
+Download a local copy by running:
 git clone [repository-link]
 cd your-repo-name
 
-
 Step 2: Set Up the Environment
-It is recommended to use a virtual environment. Install dependencies listed in requirements.txt.
-
+It is recommended to use a virtual environment. Install dependencies listed in requirements.txt:
 python -m venv env
-source env/bin/activate      # On macOS/Linux
-env\Scripts\activate         # On Windows
+source env/bin/activate (macOS/Linux)
+env\Scripts\activate (Windows)
 pip install -r requirements.txt
 
-
 Step 3: Access the Data
-Ensure the DATA/ folder contains the raw_data.csv file. If the dataset is too large for GitHub, refer to DATA/metadata_README.md for a download link.
+Ensure the DATA/ folder contains raw_data.csv. If the dataset is too large for GitHub, refer to DATA/metadata_README.md for a download link.
 
 Step 4: Run Data Cleaning
 Execute the first script to clean and prepare the dataset:
@@ -122,7 +117,7 @@ References
 
 Guo, X., Zhang, Y., & Li, T. (2025). CHARGED: A Harmonized Global Dataset for Electric Vehicle Charging Demand Forecasting. Harvard Dataverse. https://doi.org/10.7910/DVN/CHARGED
 
-CHARGED Dataset GitHub Repository. (2025). Global EV Charging Data Collection and Benchmarking. Retrieved from https://github.com/Tsinghua-IDEA-lab/CHARGED
+CHARGED Dataset GitHub Repository. (2025). Global EV Charging Data Collection and Benchmarking. Retrieved from: https://github.com/Tsinghua-IDEA-lab/CHARGED
 
 OpenAI ChatGPT. (2025). Assistance with data exploration, visualization, and report composition.
 
