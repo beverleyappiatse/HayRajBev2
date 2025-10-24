@@ -8,16 +8,27 @@ Instructor: Professor Alonzi
 
 Contents of the Repository
 
-This repository follows the TIER Protocol 4.0 to ensure transparency and reproducibility.
-It contains all code, data, documentation, and outputs associated with this project. The primary components are:
+This repository is structured following the TIER Protocol 4.0 to ensure transparency and reproducibility. It includes all code, data, documentation, and outputs used to complete this project. The major folders are:
+
+SCRIPTS/ – Contains all source code and scripts used for data processing, analysis, and visualization.
+
+DATA/ – Contains initial, cleaned, and processed datasets, along with metadata and data dictionaries.
+
+OUTPUT/ – Contains all generated figures, tables, and results from the analysis.
+
+LICENSE.md – Specifies the terms of use (MIT License by default).
+
+README.md – Orientation and documentation for this repository.
 
 Section 1: Software and Platform
 
 Software Used:
-The primary software used for this project is Python 3.11.
 
-Packages:
-The following Python packages are required:
+Python 3.10 (Anaconda or standard distribution)
+
+Jupyter Notebook for running analysis and visualizations
+
+Add-on Packages:
 
 pandas
 
@@ -30,55 +41,73 @@ seaborn
 scikit-learn
 
 Platform:
-The project was developed and tested on macOS Monterey (version 12.6), but it should also be compatible with Windows 10/11 and Linux operating systems.
+
+Developed and tested on macOS Monterey (version 12.6)
+
+Fully compatible with Windows 10/11 and Linux systems
 
 Section 2: Map of Documentation
 
 Repository Structure:
 
-Top-level directory:
+project-repository/
+│
+├── README.md
+├── LICENSE.md
+│
+├── SCRIPTS/
+│ ├── 01_data_cleaning.py
+│ ├── 02_feature_engineering.py
+│ ├── 03_model_training.py
+│ ├── 04_visualization.ipynb
+│
+├── DATA/
+│ ├── raw_data.csv
+│ ├── cleaned_data.csv
+│ ├── metadata_README.md
+│
+├── OUTPUT/
+│ ├── model_summary.txt
+│ ├── results_table.csv
+│ ├── figure_1_accuracy_plot.png
+│ ├── figure_2_feature_importance.png
+│
+└── docs/
+├── project_proposal.pdf
+├── final_report.pdf
 
-README.md – Overview and documentation of the repository.
-
-LICENSE.md – Project license (MIT).
-
-SCRIPTS/ – Contains all Python scripts used in data processing and analysis.
-
-DATA/ – Contains all datasets used in the project.
-
-raw/ – Original, unaltered datasets.
-
-processed/ – Cleaned and transformed datasets ready for analysis.
-
-OUTPUT/ – Contains results and generated figures.
-
-figures/ – Visualizations produced from the analysis.
-
-tables/ – Exported summary statistics and data tables.
+Each folder contains a local README.md where relevant, explaining the files and their purposes.
 
 Section 3: Instructions for Reproducing Results
 
-To reproduce the results of this project, follow the steps below:
+Follow the steps below to reproduce the results from this project.
 
-1. Clone the repository
-Download a local copy by running:
-git clone [repository-link]
+Step 1: Clone the Repository
+Clone the repository and navigate to the project directory.
 
-2. Install dependencies
-Install all required packages using:
-pip install -r requirements.txt
+Step 2: Set Up the Environment
+It is recommended to use a virtual environment. Install dependencies listed in requirements.txt.
 
-3. Access the data
-Make sure all raw datasets are located in the DATA/raw folder.
+Step 3: Access the Data
+Ensure the DATA/ folder contains the raw_data.csv file. If the dataset is too large for GitHub, refer to DATA/metadata_README.md for a download link.
 
-4. Run preprocessing scripts
-Execute the scripts in the SCRIPTS folder in numerical order (e.g., 01_clean_data.py, 02_analyze_data.py).
+Step 4: Run Data Cleaning
+Execute the first script to clean and prepare the dataset:
+python SCRIPTS/01_data_cleaning.py
 
-5. Generate outputs
-After running the scripts, results will automatically be saved in the OUTPUT folder under figures and tables.
+Step 5: Train the Model
+Run the model training script:
+python SCRIPTS/03_model_training.py
 
-6. Verify results
-Compare your generated results with the reference files in OUTPUT to confirm successful replication.
+Step 6: Generate Visualizations
+Open the Jupyter Notebook and execute all cells to create visualizations:
+jupyter notebook SCRIPTS/04_visualization.ipynb
+
+Step 7: Review the Outputs
+All generated tables and figures will appear in the OUTPUT/ folder.
+
+Step 8: Verify Results
+The outputs should reproduce the same results as shown in the presentation and final report. If differences occur, ensure all dependencies and package versions match those listed.
 
 References
 
@@ -87,3 +116,7 @@ Guo, X., Zhang, Y., & Li, T. (2025). CHARGED: A Harmonized Global Dataset for El
 CHARGED Dataset GitHub Repository. (2025). Global EV Charging Data Collection and Benchmarking. Retrieved from https://github.com/Tsinghua-IDEA-lab/CHARGED
 
 OpenAI ChatGPT. (2025). Assistance with data exploration, visualization, and report composition.
+
+License
+
+This repository uses the MIT License (see LICENSE.md for full details).
