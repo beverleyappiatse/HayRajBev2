@@ -20,7 +20,7 @@ Volume                          Float      Measured quantity at that site and ti
 ##Exploratory Data Analysis
 
 Figure 1. Energy Demand (Day by Day datapoints) - Month on X-Axis
-
+Reference EDA file
 
 Figure 2. Average Charging Demand by the Hour of the Day (Hour 0 = 12am, Hour 23 = 11pm)
-
+Reference EDA file
