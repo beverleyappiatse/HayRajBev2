@@ -1,126 +1,131 @@
 # HayRajBev2
-# Electric Vehicle Charging Demand
 
-## Course: DS 4002 Section 001
-## Date: 10/20/2025
-## Team Members: Hayden Cook (leader), Beverley Appiatse, Raj Bhowmic
-## Instructor: Professor Alonzi
+## Electric Vehicle Charging Demand
 
-### Contents of the Repository
+**Course:** DS 4002 Section 001  
+**Date:** 10/20/2025  
+**Team Members:** Hayden Cook (leader), Beverley Appiatse, Raj Bhowmic  
+**Instructor:** Professor Alonzi
 
-This repository is structured following the TIER Protocol 4.0 to ensure transparency and reproducibility. It includes all code, data, documentation, and outputs used to complete this project. The major folders are:
+---
 
-SCRIPTS/ – Contains all source code and scripts used for data processing, analysis, and visualization
+## Contents of the Repository
 
-DATA/ – Contains initial, cleaned, and processed datasets, along with metadata and data dictionaries
+This repository follows the TIER Protocol 4.0 to ensure transparency and reproducibility. Top-level items:
 
-OUTPUT/ – Contains all generated figures, tables, and results from the analysis
+- LICENSE.md  
+- README.md (this file)  
+- SCRIPTS/ — source code and execution scripts  
+- DATA/ — raw and processed datasets and metadata_README.md  
+- OUTPUT/ — figures, tables, and model outputs  
+- docs/ — proposal and final report
 
-LICENSE.md – Specifies the terms of use (MIT License by default)
+---
 
-README.md – Orientation and documentation for this repository
+## Section 1: Software and Platform
 
-### Section 1: Software and Platform
+### Software used
+- Python 3.10 (Anaconda or standard distribution)  
+- Jupyter Notebook
 
-#### Software Used:
+### Add-on packages (install before running)
+- pandas  
+- numpy  
+- matplotlib  
+- seaborn  
+- scikit-learn
 
-Python 3.10 (Anaconda or standard distribution)
+(Install with: `pip install -r requirements.txt` — `requirements.txt` is included in the repo.)
 
-Jupyter Notebook for running analysis and visualizations
+### Platform
+- Developed and tested on macOS Monterey (12.6)  
+- Compatible with Windows 10/11 and Linux
 
-#### Add-on Packages:
+---
 
-pandas
+## Section 2: Map of Documentation
 
-numpy
+**Repository structure (top-level):**
 
-matplotlib
+- README.md  
+- LICENSE.md  
+- SCRIPTS/  
+  - 01_data_cleaning.py  
+  - 02_feature_engineering.py  
+  - 03_model_training.py  
+  - 04_visualization.ipynb  
+- DATA/  
+  - raw/ (original files)  
+  - processed/ (cleaned files)  
+  - metadata_README.md (data summary, provenance, license, data dictionary, ethical statements, 2+ plots)  
+- OUTPUT/  
+  - figures/  
+  - tables/  
+  - model_artifacts/  
+- docs/  
+  - project_proposal.pdf  
+  - final_report.pdf
 
-seaborn
+Each folder contains a local README.md (where relevant) describing contents and usage.
 
-scikit-learn
+---
 
-#### Platform:
+## Section 3: Instructions for Reproducing Results
 
-Developed and tested on macOS Monterey (version 12.6)
+Follow these steps in order to reproduce the project results.
 
-Fully compatible with Windows 10/11 and Linux systems
+1. **Clone the repository and change directory**  
+   - `git clone https://github.com/your-username/HayRajBev2.git`  
+   - `cd HayRajBev2`
 
-### Section 2: Map of Documentation
+2. **Set up environment**  
+   - Create and activate a virtual environment (recommended).  
+     - macOS / Linux: `python -m venv env && source env/bin/activate`  
+     - Windows (PowerShell): `python -m venv env; .\env\Scripts\Activate.ps1`  
+   - Install dependencies: `pip install -r requirements.txt`
 
-#### Repository Structure:
+3. **Obtain data**  
+   - If `DATA/raw/` is present in the repo, skip.  
+   - If not (large files), follow `DATA/metadata_README.md` to download and place files into `DATA/raw/`.  
+   - Confirm expected filenames listed in `DATA/metadata_README.md`.
 
-project-repository/
-│
-├── README.md
-├── LICENSE.md
-│
-├── SCRIPTS/
-│ ├── 01_data_cleaning.py
-│ ├── 02_feature_engineering.py
-│ ├── 03_model_training.py
-│ ├── 04_visualization.ipynb
-│
-├── DATA/
-│ ├── raw_data.csv
-│ ├── cleaned_data.csv
-│ ├── metadata_README.md
-│
-├── OUTPUT/
-│ ├── model_summary.txt
-│ ├── results_table.csv
-│ ├── figure_1_accuracy_plot.png
-│ ├── figure_2_feature_importance.png
-│
-└── docs/
-├── project_proposal.pdf
-├── final_report.pdf
+4. **Preprocess data**  
+   - Run: `python SCRIPTS/01_data_cleaning.py`  
+   - Output: cleaned files saved to `DATA/processed/`. Check logs printed to console.
 
-Each folder contains a local README.md where relevant, explaining the files and their purposes.
+5. **Feature engineering**  
+   - Run: `python SCRIPTS/02_feature_engineering.py`  
+   - Output: feature datasets saved to `DATA/processed/`.
 
-### Section 3: Instructions for Reproducing Results
+6. **Train baseline and models**  
+   - ARIMA baseline (example): `python SCRIPTS/03_model_training.py --model arima --site-id 100`  
+   - Deep learning example (if included): `python SCRIPTS/03_model_training.py --model lstm --epochs 50`  
+   - Model artifacts and logs are written to `OUTPUT/model_artifacts/`.
 
-Step 1: Clone the Repository
-Download a local copy by running:
-git clone [repository-link]
-cd your-repo-name
+7. **Generate visualizations and results**  
+   - Open and run notebook: `jupyter notebook SCRIPTS/04_visualization.ipynb`  
+   - Final figures and CSV summaries saved to `OUTPUT/figures/` and `OUTPUT/tables/`.
 
-Step 2: Set Up the Environment
-It is recommended to use a virtual environment. Install dependencies listed in requirements.txt:
-python -m venv env
-source env/bin/activate (macOS/Linux)
-env\Scripts\activate (Windows)
-pip install -r requirements.txt
+8. **Verify outputs**  
+   - Compare generated files in `OUTPUT/` with those in `OUTPUT/reference/` (if provided).  
+   - Key metrics are recorded in `OUTPUT/tables/metrics_summary.csv`.
 
-Step 3: Access the Data
-Ensure the DATA/ folder contains raw_data.csv. If the dataset is too large for GitHub, refer to DATA/metadata_README.md for a download link.
+**Notes:**  
+- Use the `--help` option on scripts for additional flags and options (e.g., `--site-id`, `--start-date`, `--end-date`).  
+- For reproducible runs, seed randomness where applicable; seeds used in experiments are recorded in `OUTPUT/model_artifacts/training_config.json`.
 
-Step 4: Run Data Cleaning
-Execute the first script to clean and prepare the dataset:
-python SCRIPTS/01_data_cleaning.py
+---
 
-Step 5: Train the Model
-Run the model training script:
-python SCRIPTS/03_model_training.py
+## References
 
-Step 6: Generate Visualizations
-Open the Jupyter Notebook and execute all cells to create visualizations:
-jupyter notebook SCRIPTS/04_visualization.ipynb
-
-Step 7: Review the Outputs
-All generated tables and figures will appear in the OUTPUT/ folder.
-
-Step 8: Verify Results
-The outputs should reproduce the same results as shown in the presentation and final report. Ensure all dependencies and package versions match those listed.
-
-### References
-
-Guo, X., Zhang, Y., & Li, T. (2025). CHARGED: A Harmonized Global Dataset for Electric Vehicle Charging Demand Forecasting. Harvard Dataverse. https://doi.org/10.7910/DVN/CHARGED
+Guo, X., Zhang, Y., & Li, T. (2025). *CHARGED: A Harmonized Global Dataset for Electric Vehicle Charging Demand Forecasting.* Harvard Dataverse. https://doi.org/10.7910/DVN/CHARGED
 
 CHARGED Dataset GitHub Repository. (2025). Global EV Charging Data Collection and Benchmarking. Retrieved from: https://github.com/Tsinghua-IDEA-lab/CHARGED
 
 OpenAI ChatGPT. (2025). Assistance with data exploration, visualization, and report composition.
 
-License
+---
 
-This repository uses the MIT License (see LICENSE.md for full details).
+## License
+
+This repository is licensed under the MIT License. See LICENSE.md for details.
