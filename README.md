@@ -50,21 +50,17 @@ This repository follows the TIER Protocol 4.0 to ensure transparency and reprodu
 - README.md  
 - LICENSE.md  
 - SCRIPTS/  
-  - 01_data_cleaning.py  
-  - 02_feature_engineering.py  
-  - 03_model_training.py  
-  - 04_visualization.ipynb  
+  - CHARGE_Arima.ipynb – Jupyter Notebook implementing an ARIMA model for time-series forecasting of electric vehicle charging demand.
+  - CHARGE_TemporalCNN.ipynb – Notebook containing a Temporal Convolutional Neural Network (TCN) model for multivariate sequence prediction.
+  - CHARGE_LSTM.ipynb – Notebook implementing a Long Short-Term Memory (LSTM) neural network to capture long-term temporal dependencies in charging patterns.    
 - DATA/  
-  - raw/ (original files)  
-  - processed/ (cleaned files)  
-  - metadata_README.md (data summary, provenance, license, data dictionary, ethical statements, 2+ plots)  
+  - LA_Volume.csv – The raw dataset containing original electric vehicle charging volume data for the Los Angeles region.
+  - LA_Volume_Cleaned.csv – The cleaned and processed dataset used for analysis after data preparation steps.
+  - README.md – Provides documentation for the data folder, including descriptions of dataset contents and preprocessing steps. 
 - OUTPUT/  
   - figures/  
   - tables/  
   - model_artifacts/  
-- docs/  
-  - project_proposal.pdf  
-  - final_report.pdf
 
 Each folder contains a local README.md (where relevant) describing contents and usage.
 
