@@ -18,8 +18,6 @@ This repository follows the TIER Protocol 4.0 to ensure transparency and reprodu
 - SCRIPTS/ — source code and execution scripts  
 - DATA/ — raw and processed datasets and metadata_README.md  
 - OUTPUT/ — figures, tables, and model outputs  
-- docs/ — proposal and final report
-
 ---
 
 ## Section 1: Software and Platform
