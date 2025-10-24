@@ -20,15 +20,15 @@ LICENSE.md – Specifies the terms of use (MIT License by default)
 
 README.md – Orientation and documentation for this repository
 
-#### Section 1: Software and Platform
+### Section 1: Software and Platform
 
-Software Used:
+#### Software Used:
 
 Python 3.10 (Anaconda or standard distribution)
 
 Jupyter Notebook for running analysis and visualizations
 
-Add-on Packages:
+#### Add-on Packages:
 
 pandas
 
@@ -40,15 +40,15 @@ seaborn
 
 scikit-learn
 
-Platform:
+#### Platform:
 
 Developed and tested on macOS Monterey (version 12.6)
 
 Fully compatible with Windows 10/11 and Linux systems
 
-#### Section 2: Map of Documentation
+### Section 2: Map of Documentation
 
-Repository Structure:
+#### Repository Structure:
 
 project-repository/
 │
@@ -78,7 +78,7 @@ project-repository/
 
 Each folder contains a local README.md where relevant, explaining the files and their purposes.
 
-#### Section 3: Instructions for Reproducing Results
+### Section 3: Instructions for Reproducing Results
 
 Step 1: Clone the Repository
 Download a local copy by running:
